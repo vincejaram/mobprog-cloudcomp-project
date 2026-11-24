@@ -1,0 +1,52 @@
+{
+  "baseUrl": "https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev",
+  "endpoints": {
+    "register": {
+      "method": "POST",
+      "url": "https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/auth/register",
+      "sampleBody": {
+        "username": "testuser1",
+        "email": "testuser1@example.com",
+        "password": "password123",
+        "createdDate": "2026-11-23",
+        "firstName": "Test",
+        "lastName": "User"
+      }
+    },
+    "login": {
+      "method": "GET",
+      "url": "https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/auth/login",
+      "sampleQueryParams": {
+        "username": "testuser1",
+        "password": "password123"
+      }
+    },
+    "getProfile": {
+      "method": "GET",
+      "url": "https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/profile",
+      "sampleQueryParams": {
+        "uuid": "USER_UUID"
+      }
+    },
+    "generateAvatarUrl": {
+      "method": "POST",
+      "url": "https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/profile/avatar",
+      "sampleBody": {
+        "uuid": "USER_UUID",
+        "contentType": "image/jpeg"
+      }
+    },
+    "updateProfile": {
+      "method": "POST",
+      "url": "https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/profile/update",
+      "sampleBody": {
+        "uuid": "USER_UUID",
+        "username": "testuser1",
+        "firstName": "Test",
+        "lastName": "User",
+        "bio": "Staying consistent every day!",
+        "profilePicUrl": "https://buddysystem-media-bucket.s3.amazonaws.com/avatars/USER_UUID.jpg"
+      }
+    }
+  }
+}
