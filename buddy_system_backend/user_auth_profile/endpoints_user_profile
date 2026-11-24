@@ -1,0 +1,40 @@
+Base URL/invoke url: https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev
+
+1. Register (POST)
+URL: https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/auth/register
+JSON Body:
+{
+  "username": "string",
+  "email": "string",
+  "password": "string",
+  "createdDate": "YYYY-MM-DD",
+  "firstName": "string",
+  "lastName": "string"
+}
+
+2. Login (GET)
+URL: https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/auth/login?username=VALUE&password=VALUE
+
+3. Get Profile (GET)
+URL: https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/profile?uuid=USER_UUID
+
+4. Generate Avatar Upload URL (POST)
+URL: https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/profile/avatar
+JSON Body:
+{
+  "uuid": "USER_UUID",
+  "contentType": "image/jpeg"
+}
+(Note: PUT the image file to the returned "uploadUrl", then save the returned "profilePicUrl" using endpoint #5.)
+
+5. Update Profile (POST)
+URL: https://n2ifyru5ti.execute-api.ap-southeast-2.amazonaws.com/dev/profile/update
+JSON Body (include only fields being updated):
+{
+  "uuid": "USER_UUID",
+  "username": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "bio": "string",
+  "profilePicUrl": "string"
+}
