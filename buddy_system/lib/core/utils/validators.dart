@@ -19,10 +19,21 @@ class Validators {
     r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
   );
 
-  static String? validateFullName(String? value) {
+  static String? validatefirstName(String? value) {
     final trimmed = value?.trim() ?? '';
     if (trimmed.isEmpty) {
-      return 'Please enter your full name.';
+      return 'Please enter your first name.';
+    }
+    if (trimmed.length < 2) {
+      return 'Name must be at least 2 characters long.';
+    }
+    return null;
+  }
+
+  static String? validatelastName(String? value) {
+    final trimmed = value?.trim() ?? '';
+    if (trimmed.isEmpty) {
+      return 'Please enter your last name.';
     }
     if (trimmed.length < 2) {
       return 'Name must be at least 2 characters long.';

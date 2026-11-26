@@ -120,27 +120,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           CustomTextField(
                             controller: _firstNameController,
                             label: 'First Name',
-                            hintText: 'Vince',
                             prefixIcon: Icons.person_outline_rounded,
                             keyboardType: TextInputType.name,
-                            validator: Validators.validateFullName,
+                            validator: Validators.validatefirstName,
                             enabled: !authProvider.isLoading,
                           ),
                           const SizedBox(height: AppSpacing.md),
                           CustomTextField(
                             controller: _lastNameController,
                             label: 'Last Name',
-                            hintText: 'Jaramilla',
                             prefixIcon: Icons.person_outline_rounded,
                             keyboardType: TextInputType.name,
-                            validator: Validators.validateFullName,
+                            validator: Validators.validatelastName,
                             enabled: !authProvider.isLoading,
                           ),
                           const SizedBox(height: AppSpacing.md),
                           CustomTextField(
                             controller: _usernameController,
                             label: 'Username',
-                            hintText: 'vincejml',
                             prefixIcon: Icons.alternate_email_rounded,
                             validator: Validators.validateUsername,
                             enabled: !authProvider.isLoading,
@@ -149,7 +146,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           CustomTextField(
                             controller: _emailController,
                             label: 'Email Address',
-                            hintText: 'you@example.com',
                             prefixIcon: Icons.email_outlined,
                             keyboardType: TextInputType.emailAddress,
                             validator: Validators.validateEmail,
@@ -159,7 +155,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           PasswordField(
                             controller: _passwordController,
                             label: 'Password',
-                            hintText: 'At least 8 characters',
                             validator: Validators.validateSignupPassword,
                             enabled: !authProvider.isLoading,
                             onChanged: (value) {

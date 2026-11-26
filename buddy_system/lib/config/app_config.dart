@@ -22,7 +22,7 @@ class AppColors {
 
   // Dark Mode
   static const Color darkBg = Color.fromARGB(255, 3, 14, 42);
-  static const Color darkSurface = Color(0xFF17262A);
+  static const Color darkSurface = Color.fromARGB(255, 60, 71, 100);
   static const Color darkSurfaceVariant = Color(0xFF203439);
   static const Color darkBorder = Color(0xFF2B4349);
   static const Color darkTextPrim = Color.fromARGB(255, 203, 87, 66);

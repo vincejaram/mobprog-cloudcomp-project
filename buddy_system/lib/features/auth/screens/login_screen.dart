@@ -122,7 +122,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           CustomTextField(
                             controller: _usernameController,
                             label: 'Username',
-                            hintText: 'Enter your username',
                             prefixIcon: Icons.alternate_email_rounded,
                             keyboardType: TextInputType.emailAddress,
                             validator: Validators.validateUsername,

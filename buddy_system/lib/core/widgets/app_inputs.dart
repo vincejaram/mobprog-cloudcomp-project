@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String label;
-  final String hintText;
   final IconData? prefixIcon;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
@@ -15,7 +14,6 @@ class CustomTextField extends StatelessWidget {
     super.key,
     required this.controller,
     required this.label,
-    required this.hintText,
     this.prefixIcon,
     this.keyboardType = TextInputType.text,
     this.textInputAction = TextInputAction.next,
@@ -32,7 +30,6 @@ class CustomTextField extends StatelessWidget {
       validator: validator,
       decoration: InputDecoration(
         labelText: label,
-        hintText: hintText,
         prefixIcon: prefixIcon != null ? Icon(prefixIcon, size: 20) : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSpacing.radius),
@@ -45,7 +42,6 @@ class CustomTextField extends StatelessWidget {
 class PasswordField extends StatefulWidget {
   final TextEditingController controller;
   final String label;
-  final String hintText;
   final String? Function(String?)? validator;
   final bool enabled;
   final void Function(String)? onChanged;
@@ -55,7 +51,6 @@ class PasswordField extends StatefulWidget {
     super.key,
     required this.controller,
     this.label = 'Password',
-    this.hintText = "Enter your password",
     this.validator,
     this.enabled = true,
     this.onChanged,
@@ -79,7 +74,6 @@ class _PasswordFieldState extends State<PasswordField> {
       onFieldSubmitted: widget.onFieldSubmitted,
       decoration: InputDecoration(
         labelText: widget.label,
-        hintText: widget.hintText,
         prefixIcon: const Icon(Icons.lock_outline_rounded, size: 20),
         suffixIcon: IconButton(
           icon: Icon(
