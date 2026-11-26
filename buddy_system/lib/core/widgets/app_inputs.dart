@@ -10,8 +10,6 @@ class CustomTextField extends StatelessWidget {
   final TextInputAction textInputAction;
   final String? Function(String?)? validator;
   final bool enabled;
-  // final void Function(String)? onChanged;
-  // final void Function(String)? onFieldSubmitted;
 
   const CustomTextField({
     super.key,
@@ -23,8 +21,6 @@ class CustomTextField extends StatelessWidget {
     this.textInputAction = TextInputAction.next,
     this.validator,
     this.enabled = true,
-    // this.onChanged,
-    // this.onFieldSubmitted,
   });
 
   @override
@@ -34,10 +30,6 @@ class CustomTextField extends StatelessWidget {
       keyboardType: keyboardType,
       textInputAction: textInputAction,
       validator: validator,
-      // enabled: enabled,
-      // onChanged: onChanged,
-      // onFieldSubmitted: onFieldSubmitted,
-      // autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         labelText: label,
         hintText: hintText,
@@ -54,7 +46,6 @@ class PasswordField extends StatefulWidget {
   final TextEditingController controller;
   final String label;
   final String hintText;
-  // final TextInputAction textInputAction;
   final String? Function(String?)? validator;
   final bool enabled;
   final void Function(String)? onChanged;
@@ -65,7 +56,6 @@ class PasswordField extends StatefulWidget {
     required this.controller,
     this.label = 'Password',
     this.hintText = "Enter your password",
-    // this.textInputAction = TextInputAction.done,
     this.validator,
     this.enabled = true,
     this.onChanged,
@@ -84,18 +74,14 @@ class _PasswordFieldState extends State<PasswordField> {
     return TextFormField(
       controller: widget.controller,
       obscureText: _obscureText,
-      //  textInputAction: widget.textInputAction,
       validator: widget.validator,
-      // enabled: widget.enabled,
       onChanged: widget.onChanged,
       onFieldSubmitted: widget.onFieldSubmitted,
-      // autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         labelText: widget.label,
         hintText: widget.hintText,
         prefixIcon: const Icon(Icons.lock_outline_rounded, size: 20),
         suffixIcon: IconButton(
-          // tooltip: _obscureText ? 'Show password' : 'Hide password',
           icon: Icon(
             _obscureText
                 ? Icons.visibility_outlined
@@ -116,14 +102,12 @@ class PrimaryButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final bool isLoading;
-  // final IconData? icon;
 
   const PrimaryButton({
     super.key,
     required this.label,
     required this.onPressed,
     this.isLoading = false,
-    //this.icon,
   });
 
   @override
@@ -151,31 +135,3 @@ class PrimaryButton extends StatelessWidget {
     );
   }
 }
-
-// class SecondaryButton extends StatelessWidget {
-//   final String label;
-//   final VoidCallback? onPressed;
-//   final IconData? icon;
-
-//   const SecondaryButton({
-//     super.key,
-//     required this.label,
-//     required this.onPressed,
-//     this.icon,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return OutlinedButton(
-//       onPressed: onPressed,
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         mainAxisSize: MainAxisSize.min,
-//         children: [
-//           if (icon != null) ...[Icon(icon, size: 20), SizedBox(width: 8)],
-//           Text(label),
-//         ],
-//       ),
-//     );
-//   }
-// }

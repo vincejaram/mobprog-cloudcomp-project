@@ -6,9 +6,9 @@ class AppColors {
   AppColors._();
 
   // Palette natin itech
-  static const Color primary = Color(0xFF1B6E6E);
-  static const Color primaryDark = Color(0xFF2A9D8F);
-  static const Color secondary = Color(0xFF68C3A3);
+  static const Color primary = Color.fromARGB(255, 27, 67, 110);
+  static const Color primaryDark = Color.fromARGB(255, 42, 107, 157);
+  static const Color secondary = Color.fromARGB(255, 104, 165, 195);
   static const Color accent = Color(0xFFF4A28C);
   static const Color success = Color(0xFF4CB97A);
   static const Color warning = Color(0xFFF6C667);
@@ -21,20 +21,20 @@ class AppColors {
   static const Color pastelYellow = Color(0xFFFFF6DC);
 
   // Dark Mode
-  static const Color darkBg = Color(0xFF0F1A1D);
+  static const Color darkBg = Color.fromARGB(255, 3, 14, 42);
   static const Color darkSurface = Color(0xFF17262A);
   static const Color darkSurfaceVariant = Color(0xFF203439);
   static const Color darkBorder = Color(0xFF2B4349);
-  static const Color darkTextPrim = Color(0xFFF2F7F6);
-  static const Color darkTextSec = Color(0xFF9EB3B8);
+  static const Color darkTextPrim = Color.fromARGB(255, 203, 87, 66);
+  static const Color darkTextSec = Color(0xFFFFF6DC);
 
   // Light Mode
   static const Color lightBg = Color(0xFFFAF9F5);
   static const Color lightSurface = Color(0xFFFFFFFF);
   static const Color lightSurfaceVariant = Color(0xFFF1F4F2);
   static const Color lightBorder = Color(0xFFE3E8E5);
-  static const Color lightTextPrim = Color(0xFF172B36);
-  static const Color lightTextSec = Color(0xFF6B7B85);
+  static const Color lightTextPrim = Color.fromARGB(255, 203, 87, 66);
+  static const Color lightTextSec = Color.fromARGB(255, 0, 0, 0);
 }
 
 class AppSpacing {
@@ -63,9 +63,6 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData get light {
-    // final baseTextTheme = GoogleFonts.plusJakartaSansTextTheme(
-    //   ThemeData.light().textTheme,
-    // );
     final baseTextTheme = ThemeData.light().textTheme;
     final fontFamily = GoogleFonts.plusJakartaSans().fontFamily;
 
